@@ -1,4 +1,7 @@
 ---
+### This file defines the software package bill of materials
+## find ports for linux/unix programs:
+# brew search
 homebrew_installed_packages:
   - ansible
   - sqlite
@@ -7,12 +10,15 @@ homebrew_installed_packages:
   - ssh-copy-id
   - wget
 
+# 
 homebrew_taps:
   - caskroom/cask
   - homebrew/binary
   - homebrew/dupes
   - homebrew/versions
 
+## Find apps that are installable this way:
+# http://caskroom.io/search
 homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
   - adium
@@ -23,10 +29,10 @@ homebrew_cask_apps:
   - intellij-idea-ce
 #  - intellij-idea
   - microsoft-lync
-#  - mysqlworkbench
+  - mysqlworkbench
   - pgadmin3
   - royal-tsx
-  - sequel-pro
+#  - sequel-pro
   - sublime-text
   - textmate
   - vagrant
