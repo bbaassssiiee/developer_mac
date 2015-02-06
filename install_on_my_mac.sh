@@ -31,5 +31,5 @@ ansible-galaxy install --force -r requirements.yml
 
 ##install_software_on_this_mac:
 # specify the apps you want in vars/main.yml
-ansible-playbook main.yml -i inventory.ini --ask-sudo-pass
+ansible-playbook provisioner.yml -i inventory.ini --ask-sudo-pass
 
