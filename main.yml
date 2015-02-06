@@ -1,11 +1,11 @@
 ---
+# Install software on your mac in one go!
 - hosts: localhost
   connection: local
 
   vars_files:
     - vars/main.yml
 
-# Install software on your mac in one go!
   roles:
     - geerlingguy.homebrew
 
