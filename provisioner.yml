@@ -1,5 +1,5 @@
 ---
-# Install software on your mac in one go!
+# Ansible playbook to install software on your mac in one go!
 - hosts: localhost
   connection: local
 
