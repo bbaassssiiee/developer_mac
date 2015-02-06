@@ -1,5 +1,5 @@
 #!/bin/bash
-### Manage the (developer) software on your Mac with one command.
+### Manage the (developer) software on your Mac with this command.
 ### @bbaassssiiee
 ### https://github.com/bbaassssiiee/developer_mac
 
