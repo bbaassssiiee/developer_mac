@@ -4,9 +4,10 @@
 # brew search
 homebrew_installed_packages:
   - ansible
+  - docker
   - sqlite
-  - mysql
-  - python
+#  - mysql
+#  - python
   - ssh-copy-id
   - wget
 
@@ -20,21 +21,53 @@ homebrew_taps:
 ## Find apps that are installable this way:
 # http://caskroom.io/search
 homebrew_cask_appdir: /Applications
+
+## @bbaasssiiee say these should be good for you
 homebrew_cask_apps:
-  - adium
-  - cord
-  - google-chrome
-  - firefox
+#  - adobe-reader
+#  - apache-directory-studio
+#  - consul
+#  - consul-template
+#  - chicken
+#  - cord
+#  - eclipse-java
+#  - google-chrome
+#  - firefox
   - filezilla
+#  - flash-player
+#  - flip4mac
   - intellij-idea-ce
-#  - intellij-idea
+#  - java
   - microsoft-lync
-  - mysqlworkbench
+#  - minecraft
+#  - mongodb
+#  - munki
+#  - murasaki
+#  - mysqlworkbench
+#  - netbeans
+#  - nmap
+#  - node 
+#  - packer
   - pgadmin3
+#  - pycharm-ce
+#  - rcdefaultapp
+#  - rcenvironment
   - royal-tsx
+#  - robomongo
+#  - rust
 #  - sequel-pro
-  - sublime-text
-  - textmate
+#  - silverlight
+#  - textwrangler
+#  - tunnelblick
+#  - sublime-text
+#  - subnetcalc
+#  - textmate
   - vagrant
   - vagrant-manager
+#  - vienna
   - virtualbox
+#  - visualvm
+#  - vmware-fusion
+  - vmware-horizon-client
+  - xquartz
+#  - zterm
