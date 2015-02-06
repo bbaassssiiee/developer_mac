@@ -1,0 +1,34 @@
+---
+homebrew_installed_packages:
+  - ansible
+  - sqlite
+  - mysql
+  - python
+  - ssh-copy-id
+  - wget
+
+homebrew_taps:
+  - caskroom/cask
+  - homebrew/binary
+  - homebrew/dupes
+  - homebrew/versions
+
+homebrew_cask_appdir: /Applications
+homebrew_cask_apps:
+  - adium
+  - cord
+  - google-chrome
+  - firefox
+  - filezilla
+  - intellij-idea-ce
+#  - intellij-idea
+  - microsoft-lync
+#  - mysqlworkbench
+  - pgadmin3
+  - royal-tsx
+  - sequel-pro
+  - sublime-text
+  - textmate
+  - vagrant
+  - vagrant-manager
+  - virtualbox
