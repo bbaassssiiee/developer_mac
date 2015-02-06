@@ -1,7 +1,7 @@
 ---
 # Mac package management by the book:
 # https://leanpub.com/ansible-for-devops
-# Role from https://galaxy.ansible.com
+# re-using a role from https://galaxy.ansible.com
 - src: geerlingguy.homebrew
   path: roles/
 
