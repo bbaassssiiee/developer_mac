@@ -25,8 +25,8 @@ homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
 #  - adobe-reader
 #  - apache-directory-studio
-#  - consul
-#  - consul-template
+  - consul
+  - consul-template
 #  - cord
 #  - eclipse-java
 #  - google-chrome
