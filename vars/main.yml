@@ -6,7 +6,6 @@ homebrew_installed_packages:
   - ansible
   - docker
   - sqlite
-#  - mysql
 #  - python
   - ssh-copy-id
   - wget
@@ -28,18 +27,15 @@ homebrew_cask_apps:
 #  - apache-directory-studio
 #  - consul
 #  - consul-template
-#  - chicken
 #  - cord
 #  - eclipse-java
 #  - google-chrome
 #  - firefox
-  - filezilla
 #  - flash-player
 #  - flip4mac
   - intellij-idea-ce
 #  - java
   - microsoft-lync
-#  - minecraft
 #  - mongodb
 #  - munki
 #  - murasaki
