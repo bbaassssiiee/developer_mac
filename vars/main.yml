@@ -4,8 +4,11 @@
 # brew search
 homebrew_installed_packages:
   - ansible
+  - autoconf
   - docker
   - sqlite
+#  - node 
+  - packer
 #  - python
   - ssh-copy-id
   - wget
@@ -28,6 +31,7 @@ homebrew_cask_apps:
 #  - consul
 #  - consul-template
   - cord
+#  - dropbox
 #  - eclipse-java
   - google-chrome
   - firefox
@@ -42,19 +46,17 @@ homebrew_cask_apps:
 #  - mysqlworkbench
 #  - netbeans
 #  - nmap
-#  - node 
-#  - packer
   - pgadmin3
 #  - pycharm-ce
   - rcdefaultapp
   - rcenvironment
   - royal-tsx
   - robomongo
-#  - rust
   - sequel-pro
 #  - silverlight
 #  - textwrangler
   - tunnelblick
+  - skype
   - sublime-text
 #  - subnetcalc
 #  - textmate
@@ -63,6 +65,7 @@ homebrew_cask_apps:
   - vienna
   - virtualbox
 #  - visualvm
+  - vlc
 #  - vmware-fusion
   - vmware-horizon-client
   - xquartz
