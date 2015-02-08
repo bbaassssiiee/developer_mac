@@ -7,9 +7,9 @@ homebrew_installed_packages:
   - autoconf
   - docker
   - sqlite
-#  - node 
+  - node 
   - packer
-#  - python
+  - python
   - ssh-copy-id
   - wget
 
@@ -36,11 +36,11 @@ homebrew_cask_apps:
   - google-chrome
   - firefox
 #  - flash-player
-#  - flip4mac
+  - flip4mac
   - intellij-idea-ce
 #  - java
   - microsoft-lync
-#  - mongodb
+  - mongodb
 #  - munki
   - murasaki
 #  - mysqlworkbench
@@ -69,4 +69,4 @@ homebrew_cask_apps:
 #  - vmware-fusion
   - vmware-horizon-client
   - xquartz
-#  - zterm
+  - zterm
