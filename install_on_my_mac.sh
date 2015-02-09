@@ -6,7 +6,7 @@
 
 ## download_apple_xcode: http://appstore.com
 # You need to download XCode, or only the command line tools
-xcrun -f git || (open https://developer.apple.com/downloads && exit 1)
+xcrun -f git || (open https://developer.apple.com/xcode/downloads/ && exit 1)
     
 ## install_apple_xcode_command_line_tools:
 # then you can install the command line tools you need
