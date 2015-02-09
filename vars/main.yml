@@ -8,7 +8,6 @@ homebrew_installed_packages:
   - docker
   - sqlite
   - node 
-  - packer
   - python
   - ssh-copy-id
   - wget
