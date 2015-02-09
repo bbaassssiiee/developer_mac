@@ -33,7 +33,3 @@ ansible-galaxy install --force -r requirements.yml
 # specify the apps you want in vars/main.yml
 ansible-playbook provisioner.yml -i inventory.ini --ask-sudo-pass
 
-##install_panamax:
-brew install --upgrade http://download.panamax.io/installer/brew/panamax.rb
-panamax init
-open http://10.0.0.200:3000/dashboard
