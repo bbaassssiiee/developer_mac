@@ -3,12 +3,6 @@
 ### @bbaassssiiee
 ### https://github.com/bbaassssiiee/developer_mac
 
-# Ask for the administrator password upfront
-sudo -v
-# Keep-alive: update existing `sudo` time stamp until `.osx` has finished
-while true;do sudo -n true;sleep 60;kill -0 "$$"||exit;done 2>/dev/null &
-
-softwareupdate -i -r -a
 
 ## download_apple_xcode: http://appstore.com
 # You need to download XCode, or only the command line tools
@@ -18,6 +12,9 @@ xcrun -f git || (open https://developer.apple.com/downloads && exit 1)
 # then you can install the command line tools you need
 xcrun -f git ||sudo xcodebuild -license
 xcrun -f git ||xcode-select --install 
+
+# To avoid pre-heartbleed SSL certificate errors boostrap without check
+echo insecure > ~/.curlrc
 
 ## install_homebrew: http://brew.sh
 # Brew is the package manager of choice on the Mac
@@ -40,3 +37,5 @@ ansible-galaxy install --force -r requirements.yml
 # specify the apps you want in vars/main.yml
 ansible-playbook provisioner.yml -i inventory.ini --ask-sudo-pass
 
+# To avoid post-heartbleed SSL certificate errors use default curl 
+rm ~/.curlrc
