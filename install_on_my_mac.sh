@@ -20,7 +20,7 @@ echo insecure > ~/.curlrc
 # Brew is the package manager of choice on the Mac
 if [ ! -x /usr/local/bin/brew ]
 then
-	ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+	yes '' | ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
 ## install_ansible: http://ansible.com
