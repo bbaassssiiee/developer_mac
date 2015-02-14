@@ -4,4 +4,3 @@
 # re-using a role from https://galaxy.ansible.com
 - src: geerlingguy.homebrew
   path: roles/
-

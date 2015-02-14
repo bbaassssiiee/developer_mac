@@ -3,10 +3,20 @@
 - hosts: localhost
   connection: local
 
+  vars:
+    - homedir: "{{ lookup('env','HOME') }}"
+
   vars_files:
     - vars/main.yml
+    - "{{homedir}}/mac_settings.yml"
 
   roles:
     - geerlingguy.homebrew
 
-  tasks: []
+  tasks:
+
+    - include: security.yml
+
+    - include: defaults.yml
+
+
