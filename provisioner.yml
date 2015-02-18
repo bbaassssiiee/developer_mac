@@ -12,10 +12,9 @@
   roles:
     - geerlingguy.homebrew
 
-  tasks:
+  tasks: []
 
-    - include: security.yml
-
-    - include: defaults.yml
+#    - include: security.yml
+#    - include: defaults.yml
 
 
