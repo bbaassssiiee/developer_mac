@@ -26,8 +26,8 @@ homebrew_cask_appdir: /Applications
 
 ## @bbaasssiiee say these should be good for you
 homebrew_cask_apps:
-  - adobe-reader
-  - apache-directory-studio
+#  - adobe-reader
+#  - apache-directory-studio
 #  - consul
 #  - consul-template
   - cord
@@ -41,29 +41,29 @@ homebrew_cask_apps:
   - java
   - microsoft-lync
 #  - munki
-  - murasaki
-  - mysqlworkbench
+#  - murasaki
+#  - mysqlworkbench
 #  - netbeans
 #  - nmap
-  - pgadmin3
+#  - pgadmin3
 #  - pycharm-ce
   - rcdefaultapp
   - rcenvironment
   - royal-tsx
-  - robomongo
-  - sequel-pro
+#  - robomongo
+#  - sequel-pro
 #  - silverlight
 #  - textwrangler
-  - tunnelblick
-  - skype
+#  - tunnelblick
+#  - skype
 #  - sublime-text
 #  - subnetcalc
   - textmate
   - vagrant
-  - vagrant-manager
+#  - vagrant-manager
   - vienna
   - virtualbox
-#  - visualvm
+  - visualvm
   - vlc
 #  - vmware-fusion
   - vmware-horizon-client
