@@ -3,7 +3,6 @@
 ### @bbaassssiiee
 ### https://github.com/bbaassssiiee/developer_mac
 
-
 ## download_apple_xcode: http://appstore.com
 # You need to download XCode, or only the command line tools
 xcrun -f git || (open https://developer.apple.com/xcode/downloads/ && exit 1)
