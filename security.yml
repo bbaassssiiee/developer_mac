@@ -13,17 +13,10 @@
     command: "systemsetup -setwakeonnetworkaccess on"
     sudo: yes
 
-  - name: "Enable Gatekeeper "
+  - name: "Enable Gatekeeper"
     shell: /usr/sbin/spctl --master-enable
     sudo: yes
 
-  - name: "Allow Signed Apps Gatekeeper"
+  - name: "Allow signed apps with Gatekeeper."
     shell:  /usr/sbin/spctl --enable --label 'Developer ID'
     sudo: yes
-
-#  - name: "Add Apps to ApprovedApps"    
-#    shell: spctl --add --label "ApprovedApps" /Applications/MyApp.app
-
-#  - name: "Allow ApprovedApps"
-#    shell: spctl --enable --label "ApprovedApps"
-
