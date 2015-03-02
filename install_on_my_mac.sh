@@ -39,5 +39,3 @@ ansible-playbook provisioner.yml -i inventory.ini --ask-sudo-pass
 # To avoid post-heartbleed SSL certificate errors use default curl 
 rm ~/.curlrc
 
-# Update this Mac immediately!
-./update_my_mac.sh
