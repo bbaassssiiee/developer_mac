@@ -4,10 +4,10 @@
 # brew search
 homebrew_installed_packages:
   - ansible
-  - autoconf
-  - docker
-  - mongodb
-  - node 
+#  - autoconf
+#  - docker
+#  - mongodb
+#  - node 
   - python
   - sqlite
   - ssh-copy-id
@@ -27,43 +27,45 @@ homebrew_cask_appdir: /Applications
 ## @bbaasssiiee say these should be good for you
 homebrew_cask_apps:
 #  - adobe-reader
-  - adium
-  - apache-directory-studio
-  - cord
+#  - apache-directory-studio
+#  - consul
+#  - consul-template
+#  - cord
 #  - dropbox
 #  - eclipse-java
-  - google-chrome
+#  - google-chrome
 #  - firefox
 #  - flash-player
-  - flip4mac
-  - intellij-idea-ce
-  - java
-  - microsoft-lync
+#  - flip4mac
+#  - intellij-idea-ce
+#  - java
+#  - microsoft-lync
 #  - munki
+#  - murasaki
 #  - mysqlworkbench
 #  - netbeans
 #  - nmap
 #  - pgadmin3
 #  - pycharm-ce
-  - rcdefaultapp
-  - rcenvironment
-  - royal-tsx
-  - robomongo
-  - sequel-pro
+#  - rcdefaultapp
+#  - rcenvironment
+#  - royal-tsx
+#  - robomongo
+#  - sequel-pro
 #  - silverlight
 #  - textwrangler
-  - tunnelblick
-  - skype
+#  - tunnelblick
+#  - skype
 #  - sublime-text
 #  - subnetcalc
-  - textmate
+#  - textmate
   - vagrant
-  - vagrant-manager
-  - vienna
+#  - vagrant-manager
+#  - vienna
   - virtualbox
 #  - visualvm
-  - vlc
+#  - vlc
 #  - vmware-fusion
-  - vmware-horizon-client
-  - xquartz
+#  - vmware-horizon-client
+#  - xquartz
 #  - zterm
