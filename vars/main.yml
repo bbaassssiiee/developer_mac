@@ -26,26 +26,24 @@ homebrew_cask_appdir: /Applications
 
 ## @bbaasssiiee say these should be good for you
 homebrew_cask_apps:
-  - adobe-reader
+#  - adobe-reader
+  - adium
   - apache-directory-studio
-#  - consul
-#  - consul-template
   - cord
 #  - dropbox
 #  - eclipse-java
   - google-chrome
-  - firefox
+#  - firefox
 #  - flash-player
   - flip4mac
   - intellij-idea-ce
   - java
   - microsoft-lync
 #  - munki
-  - murasaki
-  - mysqlworkbench
+#  - mysqlworkbench
 #  - netbeans
 #  - nmap
-  - pgadmin3
+#  - pgadmin3
 #  - pycharm-ce
   - rcdefaultapp
   - rcenvironment
