@@ -14,8 +14,10 @@
 
   tasks:
 
-    - include: security.yml
+## Enable these in your own fork.#
 
-    - include: defaults.yml
+#    - include: security.yml
+
+#    - include: defaults.yml
 
 
