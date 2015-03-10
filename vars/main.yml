@@ -4,8 +4,9 @@
 # brew search
 homebrew_installed_packages:
   - ansible
-#  - autoconf
+  - boot2docker
 #  - docker
+#  - autoconf
 #  - mongodb
 #  - node 
   - python
