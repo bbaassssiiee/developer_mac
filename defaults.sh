@@ -19,7 +19,7 @@ defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 
 # Require password immediately after sleep or screen saver begins
 defaults write com.apple.screensaver askForPassword -int 1
-defaults write com.apple.screensaver askForPasswordDelay -int 900
+defaults write com.apple.screensaver askForPasswordDelay -int 300
 
 # Save screenshots to the desktop
 defaults write com.apple.screencapture location -string "${HOME}/Pictures"
@@ -96,13 +96,16 @@ defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
 # Mail                                                                        #
 ###############################################################################
 
-# Copy addresses as `foo@example.com` instead of `Foo Bar <foo@example.com>` in Mail.app
+# Copy email addresses as `foo@example.com` instead of `Foo Bar <foo@example.com>` in Mail.app
 defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool false
 
 
 ###############################################################################
 # Terminal                                                         #
 ###############################################################################
+
+# Only use UTF-8 in Terminal.app
+#defaults write com.apple.terminal StringEncodings -array 4
 
 # Enable “focus follows mouse” for Terminal.app and all X11 apps
 # i.e. hover over a window and start typing in it without clicking first

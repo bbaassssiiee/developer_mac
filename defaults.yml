@@ -4,3 +4,12 @@
     
   - name: "Write NSDefaults using defaults.sh"
     shell: ./defaults.sh
+
+#  - name: "Set SoftwareRepoURL for Munki"
+#    shell: 'defaults write /Library/Preferences/ManagedInstalls SoftwareRepoURL "http://localhost/munki_repo"'
+#    sudo: yes
+    
+#  - name: "Set ClientIdentifier for Munki"
+#    shell: 'defaults write /Library/Preferences/ManagedInstalls ClientIdentifier "test_munki_client"'
+#    sudo: yes
+        
