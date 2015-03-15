@@ -1,4 +1,6 @@
 ---
+
+munki_server: basis.local
 ### This file defines the software package bill of materials
 ## find ports for linux/unix programs:
 # brew search

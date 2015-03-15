@@ -1,0 +1,64 @@
+---
+# play -v -K -l osxserver server.yml
+- hosts: osxserver
+  gather_facts: False
+  vars:
+    - homedir: "{{ lookup('env','HOME') }}"
+
+  vars_files:
+    - vars/server.yml
+
+  roles:
+    - geerlingguy.homebrew
+
+  tasks:
+    - name: Make sure directories for Munki exist
+      shell: mkdir -p {{server_directory}}/munki_repo/{catalogs,manifests,pkgs,pkgsinfo}
+      sudo: yes
+      
+    - name: Ensure ownership on directories for Munki
+      shell: chown root:admin {{server_directory}}/munki_repo/*
+      sudo: yes
+      
+    - name: Ensure ownership on directories for Munki
+      shell: chmod -R a+rX {{server_directory}}/munki_repo
+      sudo: yes
+
+    - name: 'defaults write com.github.autopkg MUNKI_REPO'
+      command: defaults write com.github.autopkg MUNKI_REPO {{server_directory}}/munki_repo
+      sudo: yes
+      
+    - name: 'download packages'
+      get_url: url={{item.url}} dest={{homedir}}/Downloads/{{item.pkg}}
+      with_items: ansible_installed_packages
+      retries: 3
+ 
+    - name: 'install packages'
+      command: installer -package {{homedir}}/Downloads/{{item.pkg}} -target /
+      sudo: yes
+      with_items: ansible_installed_packages
+
+    - name: 'adding recipes'
+      command: autopkg repo-add {{item}}
+      sudo: yes
+      with_items:
+        - recipes
+        - hansen-m-recipes
+        - hjuutilainen-recipes
+        - jaharmi-recipes
+        - jleggat-recipes
+        - mosen-recipes
+        - scriptingosx-recipes
+        - jessepeterson-recipes
+        - gerardkok-recipes
+
+    - name: 'running recipes'
+      shell: autopkg run -v {{item}}
+      sudo: yes
+      with_items: munki_packages
+      tags:
+        - run
+
+    - name: 'start apache'
+      command: apachectl start
+      sudo: yes

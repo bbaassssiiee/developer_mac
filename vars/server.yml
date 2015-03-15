@@ -1,0 +1,56 @@
+---
+server_directory: /Library/Webserver/Documents
+
+
+ansible_installed_packages:
+- url: "https://github.com/autopkg/autopkg/releases/download/v0.4.2/autopkg-0.4.2.pkg"
+  pkg: "autopkg-0.4.2.pkg"
+- url: "https://github.com/munki/munki/releases/download/v.2.2.3/munkitools-2.2.3.2418.pkg"
+  pkg: "munkitools-2.2.3.2418.pkg"
+
+ansible_installed_diskimages:
+- url: "https://github.com/lindegroup/autopkgr/releases/download/v1.2.1/AutoPkgr-1.2.1.dmg"
+  pkg: "AutoPkgr-1.2.1.dmg"
+
+# http://caskroom.io/search
+homebrew_installed_packages:
+  - ansible
+  - python
+  - brew-pkg
+
+homebrew_taps:
+  - caskroom/cask
+  - homebrew/binary
+  - homebrew/dupes
+  - homebrew/versions
+  - timsutton/formulae
+
+homebrew_cask_appdir: /Users/Shared/Applications
+
+homebrew_cask_apps:
+  - munki
+
+munki_packages:
+- Adium.munki
+- AdobeFlashPlayer.munki
+- AdobeReader.munki
+- CoRD.munki
+#- Firefox.munki
+- GoogleChrome.munki
+- GoogleEarth.munki
+- OracleJava8.munki
+- SequelPro.munki
+- Silverlight.munki
+- Skype.munki
+- SourceTree.munki
+- Spotify.munki
+- TextWrangler.munki
+- TheUnarchiver.munki
+- Thunderbird.munki
+- Vagrant.munki
+- Versions.munki
+- VirtualBox.munki
+- VLC.munki
+- Wireshark.munki
+- XQuartz.munki
+- MakeCatalogs.munki
