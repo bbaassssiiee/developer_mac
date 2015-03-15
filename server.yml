@@ -27,17 +27,34 @@
     - name: 'defaults write com.github.autopkg MUNKI_REPO'
       command: defaults write com.github.autopkg MUNKI_REPO {{server_directory}}/munki_repo
       sudo: yes
-      
+
+    - name: 'download images'
+      get_url: url={{item.url}} dest={{homedir}}/Downloads/{{item.dmg}}
+      with_items: ansible_installed_diskimages
+      retries: 3
+      tags:
+        - dmg
+
+    - name: 'mount image'
+      command: hdiutil mount {{homedir}}/Downloads/{{item.dmg}}
+      with_items: ansible_installed_diskimages
+      tags:
+        - dmg
+
     - name: 'download packages'
       get_url: url={{item.url}} dest={{homedir}}/Downloads/{{item.pkg}}
       with_items: ansible_installed_packages
       retries: 3
- 
+      tags:
+        - pkg
+        
     - name: 'install packages'
       command: installer -package {{homedir}}/Downloads/{{item.pkg}} -target /
       sudo: yes
       with_items: ansible_installed_packages
-
+      tags:
+        - pkg
+        
     - name: 'adding recipes'
       command: autopkg repo-add {{item}}
       sudo: yes

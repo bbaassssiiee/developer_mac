@@ -10,8 +10,12 @@ ansible_installed_packages:
 
 ansible_installed_diskimages:
 - url: "https://github.com/lindegroup/autopkgr/releases/download/v1.2.1/AutoPkgr-1.2.1.dmg"
-  pkg: "AutoPkgr-1.2.1.dmg"
-
+  dmg: "AutoPkgr-1.2.1.dmg"
+  app: "AutoPkgr"
+- url: "https://github.com/hjuutilainen/munkiadmin/releases/download/v1.1.0/MunkiAdmin-1.1.0.dmg"
+  dmg: "MunkiAdmin-1.1.0.dmg"
+  app: "MunkiAdmin"
+  
 # http://caskroom.io/search
 homebrew_installed_packages:
   - ansible
