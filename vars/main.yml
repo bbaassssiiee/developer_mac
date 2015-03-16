@@ -1,6 +1,7 @@
 ---
+### Set this to the hostname of your munki, install_munkiserver.sh
+munki_server: basis.local
 
-munki_server: localhost
 ### This file defines the software package bill of materials
 ## find ports for linux/unix programs:
 # brew search
@@ -9,9 +10,7 @@ homebrew_installed_packages:
   - boot2docker
   - brew-pkg
 #  - docker
-#  - autoconf
-#  - mongodb
-#  - node 
+  - autoconf
   - python
   - sqlite
   - ssh-copy-id
@@ -31,46 +30,29 @@ homebrew_cask_appdir: /Applications
 
 ## @bbaasssiiee say these should be good for you
 homebrew_cask_apps:
-#  - adobe-reader
-#  - apache-directory-studio
-#  - consul
-#  - consul-template
-#  - cord
-#  - dropbox
-#  - eclipse-java
-#  - google-chrome
-#  - firefox
-#  - flash-player
-#  - flip4mac
-#  - intellij-idea-ce
+  - apache-directory-studio
+  - dropbox
+  - eclipse-java
+  - firefox
+  - flip4mac
+  - intellij-idea-ce
 #  - java
-#  - microsoft-lync
-#  - munki
-#  - murasaki
-#  - mysqlworkbench
-#  - netbeans
-#  - nmap
-#  - pgadmin3
-#  - pycharm-ce
-#  - rcdefaultapp
-#  - rcenvironment
-#  - royal-tsx
-#  - robomongo
-#  - sequel-pro
-#  - silverlight
-#  - textwrangler
-#  - tunnelblick
-#  - skype
-#  - sublime-text
-#  - subnetcalc
-#  - textmate
+  - microsoft-lync
+  - munki
+  - murasaki
+  - mysqlworkbench
+  - nmap
+  - pycharm-ce
+  - rcdefaultapp
+  - rcenvironment
+  - royal-tsx
+  - robomongo
+  - textwrangler
+  - subnetcalc
+  - textmate
   - vagrant
-#  - vagrant-manager
-#  - vienna
+  - vienna
   - virtualbox
-#  - visualvm
-#  - vlc
-#  - vmware-fusion
-#  - vmware-horizon-client
-#  - xquartz
-#  - zterm
+  - visualvm
+  - vmware-horizon-client
+  - zterm

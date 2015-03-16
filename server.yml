@@ -52,6 +52,11 @@
       tags:
         - app
 
+    - name: 'unmount image'
+      shell: hdiutil unmount /Volumes/{{item.app}}
+      with_items: ansible_installed_diskimages
+      ignore_errors: yes
+
     - name: 'download packages'
       get_url: url={{item.url}} dest={{homedir}}/Downloads/{{item.pkg}}
       with_items: ansible_installed_packages
@@ -70,43 +75,41 @@
       command: autopkg repo-add {{item}}
       with_items:
         - recipes
-        - hansen-m-recipes
-        - hjuutilainen-recipes
-        - jaharmi-recipes
-        - jleggat-recipes
-        - mosen-recipes
         - scriptingosx-recipes
-        - jessepeterson-recipes
-        - gerardkok-recipes
 
-    - name: 'running recipes'
-      shell: autopkg run -v {{item}}.munki
+    - name: 'running recipes, ignoring non-idempotency'
+      shell: autopkg run -v {{item}}.munki MakeCatalogs.munki
       with_items: munki_packages
+      no_log: yes
+      ignore_errors: yes
       tags:
         - run
 
     - name: 'Update catalogs for Munki'
-      command: makecatalogs {{server_directory}}/munki_repo
+      command: /usr/local/munki/makecatalogs {{server_directory}}/munki_repo
       tags:
-        - cfg     
+        - cfg
+        - run
 
     - name: 'Create default manifest for Munki'
-      command: manifestutil new-manifest testing
+      command: /usr/local/munki/manifestutil new-manifest testing
       ignore_errors: yes
       tags:
         - cfg     
 
     - name: 'Add default catalog to manifest'
-      command: "manifestutil add-catalog testing --manifest testing"
+      command: "/usr/local/munki/manifestutil add-catalog testing --manifest testing"
       ignore_errors: yes
       tags:
         - cfg    
 
     - name: 'Add default catalog to manifest'
-      command: "manifestutil add-pkg {{item}} --manifest testing --section optional_installs"
+      command: "/usr/local/munki/manifestutil add-pkg {{item}} --manifest testing --section optional_installs"
       with_items: munki_packages
       tags:
-        - catalog    
+        - catalog
+        - cfg
+        - run
 
     - name: 'Ensure ownership on directories for Munki'
       shell: chmod -R a+rX {{server_directory}}/munki_repo

@@ -31,9 +31,6 @@ homebrew_taps:
 
 homebrew_cask_appdir: /Users/Shared/Applications
 
-homebrew_cask_apps:
-  - munki
-
 munki_packages:
 - Adium
 - AdobeFlashPlayer
@@ -42,7 +39,7 @@ munki_packages:
 #- Firefox
 - GoogleChrome
 - GoogleEarth
-- OracleJava8
+#- OracleJava8
 - SequelPro
 - Silverlight
 - Skype
@@ -50,7 +47,7 @@ munki_packages:
 - Spotify
 - TextWrangler
 - TheUnarchiver
-- Thunderbird
+#- Thunderbird
 - Vagrant
 - Versions
 - VirtualBox
