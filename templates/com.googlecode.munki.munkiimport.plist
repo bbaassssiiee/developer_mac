@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>default_catalog</key>
+	<string>testing</string>
+	<key>editor</key>
+	<string>BBEdit.app</string>
+	<key>pkginfo_extension</key>
+	<string></string>
+	<key>repo_path</key>
+	<string>{{server_directory}}/munki_repo</string>
+	<key>repo_url</key>
+	<string></string>
+</dict>
+</plist>
