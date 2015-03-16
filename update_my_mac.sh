@@ -9,5 +9,5 @@ brew upgrade brew-cask || /usr/bin/true
 brew cask cleanup
 
 ## Ansible updates the Mac software using brew, cask & ansible
-ansible-playbook provisioner.yml -i inventory.ini --ask-sudo-pass
+ansible-playbook provisioner.yml -i inventory.ini -l localhost --ask-sudo-pass
 

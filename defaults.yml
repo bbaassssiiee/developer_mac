@@ -3,7 +3,9 @@
     sudo: yes
     
   - name: "Write NSDefaults using defaults.sh"
-    shell: ./defaults.sh
+    script: defaults.sh
+    tags:
+      - defaults
 
   - name: "Set SoftwareRepoURL for Munki"
     shell: 'defaults write /Library/Preferences/ManagedInstalls SoftwareRepoURL "http://{{munki_server}}/munki_repo"'

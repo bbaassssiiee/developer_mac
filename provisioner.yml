@@ -1,7 +1,6 @@
 ---
 # Ansible playbook to install software on your mac in one go!
-- hosts: localhost
-  connection: local
+- hosts: all
 
   vars:
     - homedir: "{{ lookup('env','HOME') }}"
