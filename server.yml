@@ -73,9 +73,9 @@
         
     - name: 'adding recipes'
       command: autopkg repo-add {{item}}
-      with_items:
+      with_items: autopkg_recipes
+      tags:
         - recipes
-        - scriptingosx-recipes
 
     - name: 'running recipes, ignoring non-idempotency'
       shell: autopkg run -v {{item}}.munki MakeCatalogs.munki

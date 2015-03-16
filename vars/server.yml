@@ -31,14 +31,23 @@ homebrew_taps:
 
 homebrew_cask_appdir: /Users/Shared/Applications
 
+autopkg_recipes:
+- recipes
+- mosen-recipes
+- hjuutilainen-recipes
+- scriptingosx-recipes
+- keeleysam-recipes
+
 munki_packages:
 - Adium
 - AdobeFlashPlayer
 - AdobeReader
+- Chicken
 - CoRD
-#- Firefox
+- Flux
 - GoogleChrome
 - GoogleEarth
+- IDEA-IU
 #- OracleJava8
 - SequelPro
 - Silverlight
