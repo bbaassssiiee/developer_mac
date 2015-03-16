@@ -1,12 +1,13 @@
 ---
 
-munki_server: basis.local
+munki_server: localhost
 ### This file defines the software package bill of materials
 ## find ports for linux/unix programs:
 # brew search
 homebrew_installed_packages:
   - ansible
   - boot2docker
+  - brew-pkg
 #  - docker
 #  - autoconf
 #  - mongodb
@@ -22,6 +23,7 @@ homebrew_taps:
   - homebrew/binary
   - homebrew/dupes
   - homebrew/versions
+  - timsutton/formulae
 
 ## Find apps that are installable this way:
 # http://caskroom.io/search

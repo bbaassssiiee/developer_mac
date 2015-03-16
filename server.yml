@@ -4,7 +4,7 @@
   gather_facts: False
   vars:
     - homedir: "{{ lookup('env','HOME') }}"
-
+    - user: "{{ lookup('env','USER') }}"
   vars_files:
     - vars/server.yml
 
@@ -13,20 +13,20 @@
 
   tasks:
     - name: Make sure directories for Munki exist
-      shell: mkdir -p {{server_directory}}/munki_repo/{catalogs,manifests,pkgs,pkgsinfo}
+      shell: mkdir -p {{server_directory}}/munki_repo/{catalogs,manifests,pkgs,pkgsinfo,artwork,client_resources,icons}
       sudo: yes
       
     - name: Ensure ownership on directories for Munki
-      shell: chown root:admin {{server_directory}}/munki_repo/*
+      shell: chown -R {{user}}:staff {{server_directory}}/munki_repo/
       sudo: yes
       
     - name: Ensure ownership on directories for Munki
       shell: chmod -R a+rX {{server_directory}}/munki_repo
-      sudo: yes
+
 
     - name: 'defaults write com.github.autopkg MUNKI_REPO'
       command: defaults write com.github.autopkg MUNKI_REPO {{server_directory}}/munki_repo
-      sudo: yes
+
 
     - name: 'download images'
       get_url: url={{item.url}} dest={{homedir}}/Downloads/{{item.dmg}}
@@ -40,6 +40,12 @@
       with_items: ansible_installed_diskimages
       tags:
         - dmg
+
+    - name: 'install app'
+      shell: cp -a /Volumes/*/{{item.app}}.app /Applications creates=/Applications/{{item.app}}.app
+      with_items: ansible_installed_diskimages
+      tags:
+        - app
 
     - name: 'download packages'
       get_url: url={{item.url}} dest={{homedir}}/Downloads/{{item.pkg}}
@@ -57,7 +63,6 @@
         
     - name: 'adding recipes'
       command: autopkg repo-add {{item}}
-      sudo: yes
       with_items:
         - recipes
         - hansen-m-recipes
@@ -71,7 +76,6 @@
 
     - name: 'running recipes'
       shell: autopkg run -v {{item}}
-      sudo: yes
       with_items: munki_packages
       tags:
         - run

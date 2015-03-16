@@ -10,7 +10,6 @@
     sudo: yes
     
   - name: "Set ClientIdentifier for Munki"
-    shell: 'defaults write /Library/Preferences/ManagedInstalls
-ClientIdentifier "testing"'
+    shell: 'defaults write /Library/Preferences/ManagedInstalls ClientIdentifier "testing"'
     sudo: yes
         

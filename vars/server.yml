@@ -1,5 +1,5 @@
 ---
-server_directory: /Library/Webserver/Documents
+server_directory: /Library/Server/Web/Data/Sites/Default
 
 
 ansible_installed_packages:
