@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -v
 sudo launchctl unload /Library/LaunchDaemons/com.googlecode.munki.*
 
 sudo rm -rf "/Applications/Utilities/Managed Software Update.app"
