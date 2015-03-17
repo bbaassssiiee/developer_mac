@@ -1,0 +1,38 @@
+---
+# TODO: add these to the Managed Software Center
+# play -v -K -l osxserver caskimport.yml
+
+- hosts: osxserver
+  gather_facts: False
+  vars:
+    - homedir: "{{ lookup('env','HOME') }}"
+    - user: "{{ lookup('env','USER') }}"
+  vars_files:
+    - ../vars/main.yml
+    - ../vars/server.yml
+    
+  tasks:
+
+    - name: 'Download apps from caskroom.io'
+      shell: brew cask fetch {{item}}
+      with_items: homebrew_cask_apps
+      tags:
+        - download
+        
+    - name: 'Import apps downloaded from caskroom.io'
+      script: ../scripts//casktask.sh
+      tags:
+        - import
+
+#   - name: 'Update catalogs for Munki'
+#     command: /usr/local/munki/makecatalogs {{server_directory}}/munki_repo
+#     tags:
+#       - cfg     
+#       - import
+#       
+#    - name: 'Add default catalog to manifest'
+#      command: "/usr/local/munki/manifestutil add-pkg {{item}} --manifest testing --section optional_installs"
+#      with_items: munki_packages
+#      tags:
+#        - catalog    
+#        - import

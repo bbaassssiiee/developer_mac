@@ -31,29 +31,29 @@ homebrew_cask_appdir: /Applications
 
 ## @bbaasssiiee say these should be good for you
 homebrew_cask_apps:
-  - apache-directory-studio
-  - dropbox
-  - eclipse-java
-  - firefox
+#  - apache-directory-studio
+#  - dropbox
+#  - eclipse-java
+#  - firefox
   - flip4mac
   - intellij-idea-ce
   - java
-  - microsoft-lync
+#  - microsoft-lync
   - munki
   - murasaki
   - mysqlworkbench
   - nmap
   - pycharm-ce
-  - rcdefaultapp
-  - rcenvironment
+#  - rcdefaultapp
+#  - rcenvironment
   - royal-tsx
   - robomongo
-  - textwrangler
+#  - textwrangler
   - subnetcalc
   - textmate
-  - vagrant
+#  - vagrant
   - vienna
-  - virtualbox
+#  - virtualbox
   - visualvm
   - vmware-horizon-client
   - zterm
