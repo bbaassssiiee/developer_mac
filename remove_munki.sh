@@ -16,6 +16,8 @@ sudo pkgutil --forget com.googlecode.munki.app
 sudo pkgutil --forget com.googlecode.munki.core
 sudo pkgutil --forget com.googlecode.munki.launchd
 
+# reset defaults
+sudo defaults delete /Library/Preferences/ManagedInstalls
 # reset App Store to pull updates from default Apple servers
 sudo defaults delete /Library/Preferences/com.apple.SoftwareUpdate CatalogURL
 
