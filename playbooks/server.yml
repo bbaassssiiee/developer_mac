@@ -6,7 +6,7 @@
     - homedir: "{{ lookup('env','HOME') }}"
     - user: "{{ lookup('env','USER') }}"
   vars_files:
-    - vars/server.yml
+    - ../vars/server.yml
 
   roles:
     - geerlingguy.homebrew
@@ -24,7 +24,7 @@
       shell: chmod -R a+rX {{server_directory}}/munki_repo
 
     - name: 'set preference for munkiinstall'
-      template: src=templates/com.googlecode.munki.munkiimport.plist dest={{homedir}}/Library/Preferences/com.googlecode.munki.munkiimport.plist
+      template: src=../templates/com.googlecode.munki.munkiimport.plist dest={{homedir}}/Library/Preferences/com.googlecode.munki.munkiimport.plist
       tags:
         - cfg
       

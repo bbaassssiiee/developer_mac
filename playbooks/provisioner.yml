@@ -6,10 +6,10 @@
     - homedir: "{{ lookup('env','HOME') }}"
 
   vars_files:
-    - vars/main.yml
+    - ../vars/main.yml
 
   roles:
-    - geerlingguy.homebrew
+    - ../roles/geerlingguy.homebrew
 
 #### Enable these in your own fork.#
   tasks:

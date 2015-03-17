@@ -3,7 +3,7 @@
     sudo: yes
     
   - name: "Write NSDefaults using defaults.sh"
-    script: defaults.sh
+    script: ../scripts/defaults.sh
     tags:
       - defaults
 
