@@ -6,8 +6,8 @@ brew update
 brew cleanup
 brew prune
 brew upgrade brew-cask || /usr/bin/true
+brew cask install --force munki
 brew cask cleanup
-
 ## Ansible updates the Mac software using brew, cask & ansible
 ansible-playbook provisioner.yml -i inventory.ini -l localhost --ask-sudo-pass
-
+sudo /usr/local/munki/managedsoftwareupdate

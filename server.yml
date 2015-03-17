@@ -101,11 +101,13 @@
       command: "/usr/local/munki/manifestutil add-catalog testing --manifest testing"
       ignore_errors: yes
       tags:
+        - catalog
         - cfg    
 
     - name: 'Add default catalog to manifest'
       command: "/usr/local/munki/manifestutil add-pkg {{item}} --manifest testing --section optional_installs"
       with_items: munki_packages
+      ignore_errors: yes
       tags:
         - catalog
         - cfg
@@ -115,6 +117,7 @@
       shell: chmod -R a+rX {{server_directory}}/munki_repo
       tags:
         - cfg
+        - catalog
 
     - name: 'start apache'
       command: apachectl start

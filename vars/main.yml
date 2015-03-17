@@ -1,10 +1,11 @@
 ---
 ### Set this to the hostname of your munki, install_munkiserver.sh
-munki_server: basis.local
+munki_server: localhost
 
 ### This file defines the software package bill of materials
 ## find ports for linux/unix programs:
 # brew search
+homebrew_upgrade_all_packages: yes
 homebrew_installed_packages:
   - ansible
   - boot2docker
