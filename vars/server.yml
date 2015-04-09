@@ -1,6 +1,52 @@
 ---
 server_directory: /Library/Server/Web/Data/Sites/Default
 
+# This is extensible provided autopkg_recipes has the packages
+munki_packages:
+- Adium
+- AdobeFlashPlayer
+- AdobeReader
+- Chicken
+- CoRD
+- Flux
+- GoogleChrome
+- GoogleEarth
+#- OracleJava8
+- SequelPro
+- Silverlight
+- Skype
+- SourceTree
+- Spotify
+- TextWrangler
+- TheUnarchiver
+- Vagrant
+- Versions
+- VirtualBox
+- VLC
+- Wireshark
+- XQuartz
+  
+# This is extensible for packaging DMS's using AutoPkg
+autopkg_recipes:
+- recipes
+- mosen-recipes
+- hjuutilainen-recipes
+- scriptingosx-recipes
+- keeleysam-recipes
+
+# This is extensible to install packages using Homebrew
+homebrew_installed_packages:
+  - ansible
+  - python
+
+homebrew_cask_appdir: /opt/homebrew-cask/Caskroom
+# This is extensible, cask can be used to download Apps' DMG's
+homebrew_taps:
+  - caskroom/cask
+  - homebrew/binary
+  - homebrew/dupes
+  - homebrew/versions
+
 
 ansible_installed_packages:
 - url: "https://github.com/autopkg/autopkg/releases/download/v0.4.2/autopkg-0.4.2.pkg"
@@ -15,51 +61,3 @@ ansible_installed_diskimages:
 - url: "https://github.com/hjuutilainen/munkiadmin/releases/download/v1.1.0/MunkiAdmin-1.1.0.dmg"
   dmg: "MunkiAdmin-1.1.0.dmg"
   app: "MunkiAdmin"
-  
-# http://caskroom.io/search
-homebrew_installed_packages:
-  - ansible
-  - python
-  - brew-pkg
-
-homebrew_taps:
-  - caskroom/cask
-  - homebrew/binary
-  - homebrew/dupes
-  - homebrew/versions
-  - timsutton/formulae
-
-homebrew_cask_appdir: /Users/Shared/Applications
-
-autopkg_recipes:
-- recipes
-- mosen-recipes
-- hjuutilainen-recipes
-- scriptingosx-recipes
-- keeleysam-recipes
-
-munki_packages:
-- Adium
-- AdobeFlashPlayer
-- AdobeReader
-- Chicken
-- CoRD
-- Flux
-- GoogleChrome
-- GoogleEarth
-- IDEA-IU
-#- OracleJava8
-- SequelPro
-- Silverlight
-- Skype
-- SourceTree
-- Spotify
-- TextWrangler
-- TheUnarchiver
-#- Thunderbird
-- Vagrant
-- Versions
-- VirtualBox
-- VLC
-- Wireshark
-- XQuartz

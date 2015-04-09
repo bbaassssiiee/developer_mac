@@ -8,14 +8,11 @@ munki_server: localhost
 homebrew_upgrade_all_packages: yes
 homebrew_installed_packages:
   - ansible
-  - boot2docker
-  - brew-pkg
-#  - docker
-  - autoconf
   - python
   - sqlite
   - ssh-copy-id
   - wget
+  - brew-cask
 
 # 
 homebrew_taps:
@@ -23,11 +20,10 @@ homebrew_taps:
   - homebrew/binary
   - homebrew/dupes
   - homebrew/versions
-  - timsutton/formulae
 
 ## Find apps that are installable this way:
 # http://caskroom.io/search
-homebrew_cask_appdir: /Applications
+homebrew_cask_appdir: /opt/homebrew-cask/Caskroom
 
 ## @bbaasssiiee say these should be good for you
 homebrew_cask_apps:

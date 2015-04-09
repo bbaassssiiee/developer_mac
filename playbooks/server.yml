@@ -9,7 +9,7 @@
     - ../vars/server.yml
 
   roles:
-    - geerlingguy.homebrew
+    - ../roles/geerlingguy.homebrew
 
   tasks:
     - name: 'Make sure directories for Munki exist'

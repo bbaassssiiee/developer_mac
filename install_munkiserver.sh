@@ -1,1 +1,1 @@
-ansible-playbook -v --ask-sudo-pass -l osxserver playbooks/server.yml
+ansible-playbook -v --ask-sudo-pass -i inventory.ini -l osxserver playbooks/server.yml

@@ -14,6 +14,7 @@
 #### Enable these in your own fork.#
   tasks:
     - include: defaults.yml
+    - include: client.yml
   #  - include: network.yml
   #  - include: security.yml
 
