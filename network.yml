@@ -1,25 +1,16 @@
 ---
-# Ansible playbook to install software on your mac in one go!
-- hosts: localhost
-  connection: local
 
-  vars_files:
-    - vars/main.yml
-    - vars/settings.yml
-
-  tasks:
-    
   - name: "Set time server"
     command: "systemsetup -setnetworktimeserver Wi-Fi {{time_server}}"
     sudo: yes
 
-  - name: "Set proxy_url"
-    command: "networksetup -setautoproxyurl Wi-Fi {{proxy_url}}"
-    sudo: yes
+#  - name: "Set proxy_url"
+#    command: "networksetup -setautoproxyurl Wi-Fi {{proxy_url}}"
+#    sudo: yes
 
-  - name: "Set proxy_bypass"
-    command: "networksetup -setproxybypassdomains Wi-Fi {{proxy_bypass}}"
-    sudo: yes
+#  - name: "Set proxy_bypass"
+#    command: "networksetup -setproxybypassdomains Wi-Fi {{proxy_bypass}}"
+#    sudo: yes
 
   - name: "Set DNS name servers"
     shell: "networksetup -setdnsservers Wi-Fi {{dns_servers}}"

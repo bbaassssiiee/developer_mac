@@ -1,7 +1,7 @@
 ---
 time_server: 'time.euro.apple.com'
 dns_servers: '8.8.8.8'
-dns_search: ''
+dns_search: 'intranet'
 
 proxy: 'auto'
 #proxy_url: 'http://proxy:8080'
