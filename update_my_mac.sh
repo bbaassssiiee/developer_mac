@@ -1,5 +1,5 @@
 #!/bin/bash
-#softwareupdate -i -r -a
+softwareupdate -i -r -a
 brew update
 brew prune
 ## Ansible updates the Mac software using brew, cask & ansible
