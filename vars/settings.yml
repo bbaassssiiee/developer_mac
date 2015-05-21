@@ -4,6 +4,6 @@ dns_servers: '8.8.8.8'
 dns_search: ''
 
 proxy: 'auto'
-#proxy_url: 'http://proxy:8080'
-#proxy_bypass: '*.local 192.168/16 172.16/16 169.254/16 10/24'
+proxy_url: 'http://proxy:8080'
+proxy_bypass: '*.local 192.168/16 172.16/16 169.254/16 10/24'
 
