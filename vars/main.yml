@@ -8,6 +8,7 @@ munki_server: localhost
 homebrew_upgrade_all_packages: yes
 homebrew_installed_packages:
   - ansible
+  - packer
   - python
   - sqlite
   - ssh-copy-id
@@ -29,13 +30,13 @@ homebrew_cask_appdir: /opt/homebrew-cask/Caskroom
 homebrew_cask_apps:
 #  - apache-directory-studio
 #  - dropbox
-#  - eclipse-java
-#  - firefox
+  - eclipse-java
+  - firefox
 #  - flip4mac
-#  - intellij-idea-ce
-#  - java
+  - intellij-idea-ce
+  - java
 #  - microsoft-lync
-  - munki
+#  - munki
 #  - murasaki
 #  - mysqlworkbench
 #  - nmap
@@ -44,7 +45,8 @@ homebrew_cask_apps:
 #  - rcenvironment
 #  - royal-tsx
 #  - robomongo
-#  - textwrangler
+  - textwrangler
+  - sequelpro
 #  - subnetcalc
 #  - textmate
   - vagrant
