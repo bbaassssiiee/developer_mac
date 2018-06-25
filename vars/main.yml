@@ -2,62 +2,94 @@
 ### This file defines the software package bill of materials
 ## find ports for linux/unix programs:
 # brew search
-homebrew_installed_packages:
-  - ansible
-  - autoconf
-  - automake
-  - graphviz
-  - mongodb
-  - mysql
-  - nmap
+
+brewcask_browsers:
+  - google-chrome
+  - firefox
+#  - opera
+
+brewcask_media:
+  - vlc
+#  - murasaki
+#  - skim
+#  - calibre
+#  - vienna
+  - slack
+  - appearin
+  - keybase
+  - onedrive
+#  - skype
+# - dropbox
+
+brewcask_editors:
+  - visual-studio-code
+  - atom
+#  - sublime-text
+# - pycharm-ce
+#  - intellij-idea-ce
+
+brewcask_tools:
+  - docker
+  - sourcetree
+  - java
+#  - rcdefaultapp
+#  - rcenvironment
+#  - visualvm
+
+brew_languages:
+  - git
+  - python@2
   - node
-  - packer
-  - python
-  - sqlite
+  - groovy
+#  - gradle
+#  - maven
+#  - php@7.1
+#  - ruby
+#  - autoconf
+#  - carthage
+#  - curl
+
+brew_security:
+  - p7zip
+  - gnupg
   - ssh-copy-id
+  - telnet
+  - openssl
+  - nmap
+
+brewcask_security:
+  - gpg-suite
+#  - tunnelblick
+
+brew_devops:
+  - packer
+  - terraform
+  - shellcheck
+  - readline
+  - screen
   - wget
 
-#
-homebrew_taps:
-  - caskroom/cask
-  - homebrew/binary
-  - homebrew/dupes
-  - homebrew/versions
+brewcask_devops:
+  - vagrant
+  - virtualbox
+  - virtualbox-extension-pack
+#  - xquartz
+#  - zterm
+
+brew_databases:
+  - mongodb
+  - redis
+#  - mysql
+#  - sqlite
+#  - psequel
+
+brewcask_databases:
+  - robomongo
+#  - sequel-pro
+#  - apache-directory-studio
+#  - cocoarestclient
 
 ## Find apps that are installable this way:
 # http://caskroom.io/search
 homebrew_cask_appdir: /Applications
-
-## @bbaasssiiee say these should be good for you
-homebrew_cask_apps:
-  - apache-directory-studio
-  - calibre
-  - cocoarestclient
-  - cord
-  - dropbox
-  - google-chrome
-  - firefox
-  - flash-player
-  - flip4mac
-  - flux
-  - google-earth
-  - intellij-idea-ce
-  - java
-  - murasaki
-  - opera
-  - psequel
-  - pycharm-ce
-  - rcdefaultapp
-  - rcenvironment
-  - robomongo
-  - sequel-pro
-  - silverlight
-  - tunnelblick
-  - skype
-  - vagrant
-  - vienna
-  - visualvm
-  - vlc
-  - webstorm-ce
-  - xquartz
-  - zterm
+homebrew_upgrade_all_packages: yes

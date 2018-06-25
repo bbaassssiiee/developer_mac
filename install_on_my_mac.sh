@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -x
 ### Manage the (developer) software on your Mac with this command.
 ### @bbaassssiiee
 ### https://github.com/bbaassssiiee/developer_mac
@@ -24,7 +24,9 @@ then
 fi
 
 ## install_ansible: http://ansible.com
-brew install --update ansible
+brew install --update python@2
+pip2 install ansible==2.3.1.0
+
 
 ## install_cask: http://caskroom.io
 #brew install --update caskroom/cask/brew-cask
@@ -35,7 +37,7 @@ ansible-galaxy install -p roles --force -r requirements.yml
 
 ##install_software_on_this_mac:
 # specify the apps you want in vars/main.yml
-ansible-playbook provisioner.yml -i inventory.ini --ask-sudo-pass
+ansible-playbook provisioner.yml -i inventory.ini --ask-sudo-pass -vv
 
 # To avoid post-heartbleed SSL certificate errors use default curl
 rm ~/.curlrc

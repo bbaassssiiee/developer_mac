@@ -1,7 +1,8 @@
 #!/usr/bin/env ansible-playbook -l localhost -c local -K
 
 # Ansible playbook to install software on your mac in one go!
-- hosts: localhost
+- name: Installing software on your Mac.
+  hosts: localhost
   connection: local
 
   vars:
@@ -14,8 +15,8 @@
   roles:
     - geerlingguy.homebrew
 
-#  tasks:
-#    - include: security.yml
-#    - include: defaults.yml
-#    - include: network.yml
-
+  tasks:
+    - include: installer.yml
+ #   - include: security.yml
+ #   - include: defaults.yml
+ #   - include: network.yml

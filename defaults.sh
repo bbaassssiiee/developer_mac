@@ -106,4 +106,3 @@ defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool false
 
 # Only use UTF-8 in Terminal.app
 defaults write com.apple.terminal StringEncodings -array 4
-

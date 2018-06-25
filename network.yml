@@ -2,20 +2,24 @@
 
   - name: "Set time server"
     command: "systemsetup -setnetworktimeserver Wi-Fi {{time_server}}"
-    sudo: yes
+    when: time_server is defined
+    become: yes
 
-#  - name: "Set proxy_url"
-#    command: "networksetup -setautoproxyurl Wi-Fi {{proxy_url}}"
-#    sudo: yes
+  - name: "Set proxy_url"
+    command: "networksetup -setautoproxyurl Wi-Fi {{proxy_url}}"
+    when: proxy_url is defined
+    become: yes
 
 #  - name: "Set proxy_bypass"
 #    command: "networksetup -setproxybypassdomains Wi-Fi {{proxy_bypass}}"
-#    sudo: yes
+#    become: yes
 
   - name: "Set DNS name servers"
     shell: "networksetup -setdnsservers Wi-Fi {{dns_servers}}"
-    sudo: yes
-    
+    when: dns_servers is defined
+    become: yes
+
   - name: "Set DNS seach domain"
     shell: "networksetup -setsearchdomains Wi-Fi {{dns_search}}"
-    sudo: yes
+    when: dns_search is defined
+    become: yes

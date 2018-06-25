@@ -1,22 +1,33 @@
 ---
 # Ansible playbook to secure your mac in one go!
 
-  - name: "Block snooping in home-dirs"
-    shell: chmod 700 /Users/*
-    sudo: yes
+  - name: "Block snooping in home directories."
+    file:
+      mode: 700
+      path: "{{ homedir }}/{{ item }}"
+    with_items:
+      - Library
+      - Documents
+      - Desktop
+      - Downloads
+      - Pictures
+      - Movies
+      - Appications
 
-  - name: "Set permission on /Users/Shared"
-    shell: chmod 1777 /Users/Shared
-    sudo: yes
+    become: yes
 
-  - name: "Set wake-on-lan"
+  - name: "Set permission on Users Shared."
+    command: chmod 1777 /Users/Shared
+    become: yes
+
+  - name: "Set wake on lan."
     command: "systemsetup -setwakeonnetworkaccess on"
-    sudo: yes
+    become: yes
 
-  - name: "Enable Gatekeeper"
+  - name: "Enable Gatekeeper."
     shell: /usr/sbin/spctl --master-enable
-    sudo: yes
+    become: yes
 
   - name: "Allow signed apps with Gatekeeper."
     shell:  /usr/sbin/spctl --enable --label 'Developer ID'
-    sudo: yes
+    become: yes
